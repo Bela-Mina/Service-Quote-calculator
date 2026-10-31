@@ -7,67 +7,110 @@
 </head>
 <body>
     <header>
-        <h2>TechFix</h1>
+        <h2>TechFix</h2>
         <p>MOBILE REPAIR SERVICES</p>
-        <h2>Create a repair quotation</h1>
+        <h2>Create a repair quotation</h2>
         <p>Enter customer details and select the required services.</p>
     </header>
     <main>
         <h2>1.Customer information</h2>
         <form action="">
             <div class="container">
-                <div class="customer name">
-                    <label for="">CUSTMORE NAME</label>
-                    <input type="text" name="" id="" placeholder="Enter customer name">
+                <div class="cus-name">
+                    <label for="customer-name">CUSTOMRE NAME</label>
+                    <input type="text" name="name" id="customer-name" placeholder="Enter customer name" required>
                 </div>
-                <div class="">
-                    <label for="">PHONE MODEL</label>
-                    <input type="text" name="" id="" placeholder="eg.Samsung A15">
+                <div class="model-phone">
+                    <label for="modelP">PHONE MODEL</label>
+                    <input type="text" name="model" id="modelP" placeholder="eg.Samsung A15" required>
+                </div>
+                <div class="quantity">
+                    <select name="" id="">
+                        <option value="">Quantity for Screen</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">Quantity for Battery</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">Quantity for Software</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <!-- <label for="phone-quantity">QUNTITY</label>
+                    <input type="number" name="" id="phone-quantity" placeholder="Ensert phone quantity"  required> -->
                 </div>
                 <div class="sub-container">
                     <h2>2.Select repair services</h2>
-                    <div class="">
-                        <div class="">
-                            <input type="checkbox" name="" id="">
-                            <label for="">Screen Replacement</label>
+                    <div class="screenContainer">
+                        <div class="screenReplacement">
+                            <input type="checkbox" name="screen" id="screen-replace">
+                            <label for="screen-replace">Screen Replacement</label>
                             <p>Replace cracked or damaged phone screen</p>
                         </div>
-                        <div>
+                        <div class="screenValue">
                             <p>1,500 ETB</p>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="batteryContainer">
                         <div>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Battery replacemet</label>
+                            <input type="checkbox" name="battery" id="battery-replace">
+                            <label for="battery-replace">Battery replacemet</label>
                             <p>Replace a week or damaged battery</p>
                         </div>
-                        <div>
+                        <div class="batteryValue">
                             <p>800 ETB</p>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="softwareResult">
                         <div>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Software repair</label>
+                            <input type="checkbox" name="software" id="software-repair">
+                            <label for="software-repair">Software repair</label>
                         </div>
-                        <div>
+                        <div class="softwareValue">
                             <p>300 ETB</p>
                         </div>
                     </div>
                 </div>
                 <h2>3.Quotation summary</h2>
-                <div>
+                <div class="subResult">
                     <p>Subtotal</p>
-                    <p id="sub-result"></p>
+                    <p id="sub-result">0 ETB</p>
                 </div>
-                <div>
+                <div class="discount">
                     <p>Discount</p>
-                    <p id="disc-result"></p>
+                    <p id="disc-result">0 ETB</p>
                 </div>
-                <div>
+                <div class="estimate">
                     <h3>Estimated total</h3>
-                    <p id="estim-result"></p>
+                    <p id="estim-result">0 ETB</p>
                 </div>
                 <button type="submit">Generate quotation</button>
 
