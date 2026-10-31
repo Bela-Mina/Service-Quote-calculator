@@ -7,24 +7,70 @@
 </head>
 <body>
     <header>
-        <h1>TechFix Mobile Phone Repair</h1>
+        <h2>TechFix</h1>
+        <p>MOBILE REPAIR SERVICES</p>
+        <h2>Create a repair quotation</h1>
+        <p>Enter customer details and select the required services.</p>
     </header>
     <main>
+        <h2>1.Customer information</h2>
         <form action="">
-            <div class="name">
-                <label for="cust-name">Name:</label>
-                <input type="text" name="name" id="cust-name" minlength="3" maxlength="15"  placeholder="Enter Your Namae">
-            </div>
-            <div>
-                <div class="selct">
-                    <select name="" id="">
-                        <option value="">
-                            <h2>Screen Replacemenet</h2>
-                            <br>
-                            <p>Craked or damaged screen replacement for smartPhones</p>
-                        </option>
-                    </select>
+            <div class="container">
+                <div class="customer name">
+                    <label for="">CUSTMORE NAME</label>
+                    <input type="text" name="" id="" placeholder="Enter customer name">
                 </div>
+                <div class="">
+                    <label for="">PHONE MODEL</label>
+                    <input type="text" name="" id="" placeholder="eg.Samsung A15">
+                </div>
+                <div class="sub-container">
+                    <h2>2.Select repair services</h2>
+                    <div class="">
+                        <div class="">
+                            <input type="checkbox" name="" id="">
+                            <label for="">Screen Replacement</label>
+                            <p>Replace cracked or damaged phone screen</p>
+                        </div>
+                        <div>
+                            <p>1,500 ETB</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div>
+                            <input type="checkbox" name="" id="">
+                            <label for="">Battery replacemet</label>
+                            <p>Replace a week or damaged battery</p>
+                        </div>
+                        <div>
+                            <p>800 ETB</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div>
+                            <input type="checkbox" name="" id="">
+                            <label for="">Software repair</label>
+                        </div>
+                        <div>
+                            <p>300 ETB</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>3.Quotation summary</h2>
+                <div>
+                    <p>Subtotal</p>
+                    <p id="sub-result"></p>
+                </div>
+                <div>
+                    <p>Discount</p>
+                    <p id="disc-result"></p>
+                </div>
+                <div>
+                    <h3>Estimated total</h3>
+                    <p id="estim-result"></p>
+                </div>
+                <button type="submit">Generate quotation</button>
+
             </div>
         </form>
     </main>
