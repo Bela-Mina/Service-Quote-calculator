@@ -19,17 +19,22 @@ form.addEventListener("submit", function(event) {
     const screenQuantity = document.getElementById("screen-quantity");
     const screenPrice = document.getElementById("screen-value")
 
-     const screenQuantityValue = screenQuantity.value;
-
     
-    if(screenCheck.checked) {   
-        const screenPriceValue = screenPrice.textContent
+    const screenPriceValue = screenPrice.textContent
         .replace(",", "")
         .replace("ETB", "")
         .trim();
        const priceAll = Number(screenPriceValue);
-        total.textContent = priceAll * screenQuantityValue + " ETB";
+    const screenQuantityValue = Number(screenQuantity.value);
+
+    let screenTotal = 0;
+
+    if(screenCheck.checked) {   
+        
+        screenTotal = priceAll * screenQuantityValue + " ETB";
     }
+    total.textContent = screenTotal + " ETB"; 
     
         //
 })
+// we must create empty string because we need to store the value of price
