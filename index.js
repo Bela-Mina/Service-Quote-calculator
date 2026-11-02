@@ -19,17 +19,17 @@ form.addEventListener("submit", function(event) {
     const screenQuantity = document.getElementById("screen-quantity");
     const screenPrice = document.getElementById("screen-value")
 
-    
+     const screenQuantityValue = screenQuantity.value;
+
     
     if(screenCheck.checked) {   
-        total.textContent = priceAll * screenQuantityValue + " ETB";
-    }
-    const screenPriceValue = screenPrice.textContent
+        const screenPriceValue = screenPrice.textContent
         .replace(",", "")
         .replace("ETB", "")
         .trim();
        const priceAll = Number(screenPriceValue);
+        total.textContent = priceAll * screenQuantityValue + " ETB";
+    }
+    
         //
-        const screenQuantityValue = screenQuantity.value;
-
 })
