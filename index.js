@@ -12,7 +12,7 @@ form.addEventListener("submit", function(event) {
     const userName = document.getElementById("customer-name")
     
     ///
-    const total = document.getElementById("sub-result")
+    const total = document.getElementById("sub-price")
     //let start from screen
 
     const screenCheck = document.getElementById("screen-replace");
@@ -25,16 +25,16 @@ form.addEventListener("submit", function(event) {
         .replace("ETB", "")
         .trim();
        const priceAll = Number(screenPriceValue);
-    const screenQuantityValue = Number(screenQuantity.value);
+    const screenQuantityValue = screenQuantity.value;
 
     let screenTotal = 0;
 
     if(screenCheck.checked) {   
         
-        screenTotal = priceAll * screenQuantityValue + " ETB";
+        screenTotal = priceAll * Number(screenQuantityValue);
     }
     total.textContent = screenTotal + " ETB"; 
-    
-        //
+    // what is the mestake you use the wrong var name  in text
+        // stil now you see error in console log in 36:23 line that about textContent = 
 })
-// we must create empty string because we need to store the value of price
+// we must create empty variable because we need to store the value of price
