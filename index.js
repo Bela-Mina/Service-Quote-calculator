@@ -63,9 +63,12 @@ form.addEventListener("submit", function(event) {
 
     // validation
     if(screenCheck.checked && screenQuantityValue === "") {
-       screenQuantityValue.setCustomValidity("Please select a quantity for screen replacement.")
+       screenQuantity.setCustomValidity("Please select a quantity for screen replacement.")
+
+        screenQuantity.reportValidity();
+        return;
+
     } 
-        screenQuantityValue.reportValidity();
     //  if(!screenCheck.checked && screenQuantityValue === "") {
 
     // } else {
