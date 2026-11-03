@@ -69,14 +69,21 @@ form.addEventListener("submit", function(event) {
         return;
 
     } 
-    // battery
+    // battery vaildiation
      if(batteryChange.checked && batteryQunatityValue === "") {
         batteryQuantity.setCustomValidity("Please select a quantity for battery replacement.")
 
         batteryQuantity.reportValidity();
         return;
      }
-    //
+    // software validation
+    if(softwareFix.checked && softwareQunatityAll === "") {
+        softwareQuantity.setCustomValidity("Please select a quantity for software repair.")
+        softwareQuantity.reportValidity();
+        return;
+    }
+
+    
     if(screenCheck.checked) {           
         screenTotal = priceAll * Number(screenQuantityValue);
     }
