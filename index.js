@@ -69,17 +69,13 @@ form.addEventListener("submit", function(event) {
         return;
 
     } 
-    //  if(!screenCheck.checked && screenQuantityValue === "") {
+    // battery
+     if(batteryChange.checked && batteryQunatityValue === "") {
+        batteryQuantity.setCustomValidity("Please select a quantity for battery replacement.")
 
-    // } else {
-
-    // }
-    //
-    // if(batteryChange.checked && batteryQunatityValue === "") {
-
-    // }else {
-
-    // }
+        batteryQuantity.reportValidity();
+        return;
+     }
     //
     if(screenCheck.checked) {           
         screenTotal = priceAll * Number(screenQuantityValue);
