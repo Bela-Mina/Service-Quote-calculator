@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Phone Repair</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -14,12 +15,14 @@
     </header>
     <main>
         <h2>1.Customer information</h2>
-        <form action="">
+        <form action="" id ="form">
             <div class="container">
                 <div class="cus-name">
-                    <label for="customer-name">CUSTOMRE NAME</label>
-                    <input type="text" name="name" id="customer-name" placeholder="Enter customer name" required>
+                    <label for="customer-name">CUSTOMER NAME</label>
+                    <input type="text" name="name" id="customer-name" minLength ="3" maxLength = "20"
+                     placeholder="Enter customer name" required>
                 </div>
+                
                 <div class="model-phone">
                     <label for="modelP">PHONE MODEL</label>
                     <input type="text" name="model" id="modelP" placeholder="eg.Samsung A15" required>
@@ -33,73 +36,87 @@
                             <label for="screen-replace">Screen Replacement</label>
                             <p>Replace cracked or damaged phone screen</p>
                         </div>
-                        <div class="screenValue">
-                            <p>1,500 ETB</p>
+                        <div class="screenValue" id="screen-value">
+                            <p>2,500 ETB</p>
                         </div>
-                        <select name="screen" id="screen-quantity">
-                            <option value="">Quantity for Screen</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <div class="screenQuantity">
+                            <select name="screen" id="screen-quantity">
+                                <option value="">Quantity for Screen</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
                     </div>
+                    
                     <div class="batteryContainer">
                         <div>
                             <input type="checkbox" name="battery" id="battery-replace">
-                            <label for="battery-replace">Battery replacemet</label>
-                            <p>Replace a week or damaged battery</p>
+                            <label for="battery-replace">Battery Replacement</label>
+                            <p>Replace a weak or damaged battery</p>
                         </div>
-                        <div class="batteryValue">
-                            <p>800 ETB</p>
+                        <div class="batteryValue" id="battery-value">
+                            <p>1,500 ETB</p>
                         </div>
-                        <select name="battery" id="battery-qantity">
-                            <option value="">Quantity for Battery</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <div class="batteryQuantity">
+                            <select name="battery" id="battery-qantity">
+                                <option value="">Quantity for Battery</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
                     </div>
+
+
                     <div class="softwareResult">
                         <div>
                             <input type="checkbox" name="software" id="software-repair">
                             <label for="software-repair">Software repair</label>
                         </div>
-                        <div class="softwareValue">
+                        <div class="softwareValue" id="software-price">
                             <p>300 ETB</p>
                         </div>
-                        <select name="software" id="software-quantity">
-                            <option value="">Quantity for Software</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <div class="softwareQuantity">
+                            <select name="software" id="software-quantity">
+                                <option value="">Quantity for Software</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
                     </div>
+
                 </div>
                 <h2>3.Quotation summary</h2>
                 <div class="subResult">
                     <p>Subtotal</p>
-                    <p id="sub-result">0 ETB</p>
+                    <p id="sub-price">0 ETB</p>
+                </div>
+                <div>
+                    <p>Each Total</p>
+                    <p id="each-total">0 ETB</p>
                 </div>
                 <div class="discount">
                     <p>Discount</p>
@@ -113,6 +130,7 @@
 
             </div>
         </form>
+        <script src="index.js"></script>
     </main>
     <footer></footer>
 </body>
