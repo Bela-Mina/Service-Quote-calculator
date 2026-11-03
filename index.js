@@ -60,6 +60,23 @@ form.addEventListener("submit", function(event) {
     let screenTotal = 0;
     let batteryT = 0;
     let softwareTotal = 0
+
+    // validation
+    if(screenCheck.checked && screenQuantityValue === "") {
+       screenQuantityValue.setCustomValidity("Please select a quantity for screen replacement.")
+    } 
+        screenQuantityValue.reportValidity();
+    //  if(!screenCheck.checked && screenQuantityValue === "") {
+
+    // } else {
+
+    // }
+    //
+    // if(batteryChange.checked && batteryQunatityValue === "") {
+
+    // }else {
+
+    // }
     //
     if(screenCheck.checked) {           
         screenTotal = priceAll * Number(screenQuantityValue);
@@ -82,7 +99,6 @@ form.addEventListener("submit", function(event) {
 })
 // we must create empty variable because we need to store the value of price
 
-// let review this code
-// 1, spelling error document but you wright documenet
-// 2, subtotal is not actually a subtotal this display individual price 
-// 3, 
+/// fix some part
+// 1, you fix validation system
+// 2, you must use if statement example if screen is checked but quantity is empty reject
