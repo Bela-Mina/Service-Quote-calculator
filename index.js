@@ -55,5 +55,27 @@ form.addEventListener("submit", function(event) {
         batteryT = priceToNumber * Number(batteryQunatityValue);        
     }
     total.textContent = batteryT   + "ETB"
+
+    ////
+    // let move softwarePart
+    //
+    const softwareFix = document.getElementById("software-repair");
+    const softwarePrice = documenet.getElementById("software-price");
+    const softwareQuantity = documenet.getElementById("software-quantity");
+
+    //let change the price to Number
+    const softwarePriceValue = softwarePrice.textContent
+        .replace(",", "")
+        .replace("ETB", "")
+        .trim();
+        //
+        const softwarePriceValueAll = Number(softwarePriceValue)
+        const softwareQunatityAll = softwareQuantity.value;
+
+        let softwareTotal = 0
+        if(softwareFix.checked) {
+            softwareTotal = softwarePriceValueAll * Number(softwareQunatityAll)
+        }
+        total.textContent = softwareTotal + "ETB";
 })
 // we must create empty variable because we need to store the value of price
