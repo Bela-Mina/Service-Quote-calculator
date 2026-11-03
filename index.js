@@ -13,6 +13,7 @@ form.addEventListener("submit", function(event) {
     
     ///
     const total = document.getElementById("sub-price")
+    const eachTotal =document.getElementById("each-total")
     //let start from screen
 
     const screenCheck = document.getElementById("screen-replace");
@@ -22,13 +23,13 @@ form.addEventListener("submit", function(event) {
     // let work battery
     const batteryChange = document.getElementById("battery-replace");
     const batteryPrice = document.getElementById("battery-value");
-    const batteryQuantity = document.getElementById("battery-qantity");
+    const batteryQuantity = document.getElementById("battery-quantity");
     //
     // let move softwarePart
     //
     const softwareFix = document.getElementById("software-repair");
-    const softwarePrice = documenet.getElementById("software-price");
-    const softwareQuantity = documenet.getElementById("software-quantity");
+    const softwarePrice = document.getElementById("software-price");
+    const softwareQuantity = document.getElementById("software-quantity");
 
     
     ///
@@ -57,23 +58,31 @@ form.addEventListener("submit", function(event) {
 
     ////
     let screenTotal = 0;
+    let batteryT = 0;
+    let softwareTotal = 0
+    //
     if(screenCheck.checked) {           
         screenTotal = priceAll * Number(screenQuantityValue);
     }
     ////battery
-    let batteryT = 0
     if(batteryChange.checked) {
         batteryT = priceToNumber * Number(batteryQunatityValue);        
     }
     //let change the price to Number
-    let softwareTotal = 0
     if(softwareFix.checked) {
         softwareTotal = softwarePriceValueAll * Number(softwareQunatityAll)
     }
 
-    total.textContent = `screen Price ${screenTotal}ETB + battery Price${batteryT}ETB + software Price${softwareTotal} ETB`
+    total.textContent = screenTotal + batteryT + softwareTotal + "ETB";
+    //
+    eachTotal.textContent = `screen Price ${screenTotal}ETB  Battery Price${batteryT}ETB  Software Price${softwareTotal} ETB`
         // total.textContent = softwareTotal + "ETB";
 
         // fix some thing about totalwe must fix total by use ne total
 })
 // we must create empty variable because we need to store the value of price
+
+// let review this code
+// 1, spelling error document but you wright documenet
+// 2, subtotal is not actually a subtotal this display individual price 
+// 3, 
