@@ -1,4 +1,8 @@
 const form = document.querySelector("#form");
+const screenQuantity = document.getElementById("screen-quantity");
+const batteryQuantity = document.getElementById("battery-quantity");
+const softwareQuantity = document.getElementById("software-quantity");
+
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -8,28 +12,22 @@ form.addEventListener("submit", function(event) {
             return;
     }
     
-    //userNAme
-    const userName = document.getElementById("customer-name")
-    
     ///
     const total = document.getElementById("sub-price")
     const eachTotal =document.getElementById("each-total")
     //let start from screen
 
     const screenCheck = document.getElementById("screen-replace");
-    const screenQuantity = document.getElementById("screen-quantity");
     const screenPrice = document.getElementById("screen-value")
     //
     // let work battery
     const batteryChange = document.getElementById("battery-replace");
     const batteryPrice = document.getElementById("battery-value");
-    const batteryQuantity = document.getElementById("battery-quantity");
     //
     // let move softwarePart
     //
     const softwareFix = document.getElementById("software-repair");
     const softwarePrice = document.getElementById("software-price");
-    const softwareQuantity = document.getElementById("software-quantity");
 
     
     ///
@@ -39,7 +37,7 @@ form.addEventListener("submit", function(event) {
         .trim();
     const priceAll = Number(screenPriceValue);
     const screenQuantityValue = screenQuantity.value;
-//
+    //
     const batterypricesValue = batteryPrice.textContent
         .replace(",", "")
         .replace("ETB", "")
@@ -62,7 +60,7 @@ form.addEventListener("submit", function(event) {
     let softwareTotal = 0
 
     // validation
-    if(screenCheck.checked && screenQuantityValue === "") {
+    if(screenCheck.checked  && screenQuantityValue === "") {
        screenQuantity.setCustomValidity("Please select a quantity for screen replacement.")
 
         screenQuantity.reportValidity();
@@ -82,8 +80,9 @@ form.addEventListener("submit", function(event) {
         softwareQuantity.reportValidity();
         return;
     }
-
+    ////
     
+
     if(screenCheck.checked) {           
         screenTotal = priceAll * Number(screenQuantityValue);
     }
@@ -103,8 +102,48 @@ form.addEventListener("submit", function(event) {
 
         // fix some thing about totalwe must fix total by use ne total
 })
-// we must create empty variable because we need to store the value of price
 
-/// fix some part
-// 1, you fix validation system
-// 2, you must use if statement example if screen is checked but quantity is empty reject
+screenQuantity.addEventListener("change", function() {
+        screenQuantity.setCustomValidity("");
+});
+
+// some error i see
+// 1, the vaidation is working but it ask me mandatory to select quantity even if did not select the servise and check  so you should use 
+
+
+
+
+
+
+// 3. Your project completion roadmap
+// Let's finish this without jumping into React or adding unnecessary features.
+// TechFix development checklist
+// 1. Service calculations
+//    Completed
+   
+//    Screen, battery, software and subtotal.
+// 2. Conditional validation
+//    Basic logic done
+   
+//    Validate quantities only when their services are selected.
+// 3. Fix custom validity errors
+   
+//    Clear errors when customers correct their quantities.
+// 4. Service selection validation
+   
+//    Prevent empty quotations.
+// 5. Discount calculation
+   
+//    Implement a realistic discount rule.
+// 6. Estimated total
+   
+//    Calculate subtotal minus discount.
+// 7. Quotation generation
+   
+//    Display customer information and repair breakdown.
+// 8. Testing and debugging
+   
+//    Test invalid inputs, combinations, and edge cases.
+// 9. CSS and responsive design
+   
+//    Finish the interface after the JavaScript works.
